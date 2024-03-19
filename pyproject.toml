@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "roblox"
+version = "0.1.0"
+description = ""
+authors = ["elseagle <dowolebolu@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+llama-index = "^0.10.20"
+python-decouple = "^3.8"
+openai = "^1.14.1"
+streamlit = "^1.32.2"
+nltk = "^3.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
