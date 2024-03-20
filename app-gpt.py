@@ -37,10 +37,17 @@ st.button("Reset Conversation", on_click=reset_conversation)
 
 
 # initialize chat history
+welcome_message = """Hi, I'm a Roblox assistant, built to tell you everything you need to know about "Makeup Your 
+Mix", a Roblox campaign by Maybelline. I can tell you anything and everything about the activation. Simply ask me 
+things like: 
+- How do I get into Makeup Your Mix? 
+- What is the inspiration behind the Roblox activation? 
+- What type of rewards can I earn? What is Roblox?
+"""
+
+
 def initialize_chat():
-    st.session_state["messages"] = [
-        {"role": "assistant", "content": "Hello! I'm your Roblox assistant."}
-    ]
+    st.session_state["messages"] = [{"role": "assistant", "content": welcome_message}]
 
 
 # Function to load and index the data, with caching to avoid reloading on every interaction
@@ -79,7 +86,6 @@ def get_conversation_from_llm(index_param, user_prompt_param, memory=memory):
 
 # Proceed only if the data is loaded successfully
 if index is not None:
-    print(st.session_state, end="\n\n")
     if st.session_state.get("messages") is None:
         initialize_chat()
 
