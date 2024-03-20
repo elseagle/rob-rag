@@ -27,6 +27,9 @@ Your response should be:
 5. Providing value through precision and relevance to enhance the user's experience.
 """
 )
+
+# logo at the center
+st.image("./media/insomnia.png", width=200, use_column_width="auto")
 # page header
 st.header("Maybelline Roblox Activation - FAQ & How-tos")
 st.subheader("Ask me anything about the Maybelline Roblox Activation")
